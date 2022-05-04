@@ -56,7 +56,10 @@ def initData(filename,domainlist):
                  continue
             tokens = line.split(",")
             name = tokens[0]
-            label = tokens[1]
+            if len(tokens)>1:
+                label=tokens[1]
+            else:
+                label='?'
            
             length = len(name)
             num = cal_num(name)
